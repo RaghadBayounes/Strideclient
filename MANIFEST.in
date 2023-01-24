@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include strideclient *.css
+recursive-include strideclient *.csv
+recursive-include strideclient *.html
+recursive-include strideclient *.ico
+recursive-include strideclient *.js
+recursive-include strideclient *.json
+recursive-include strideclient *.md
+recursive-include strideclient *.png
+recursive-include strideclient *.py
+recursive-include strideclient *.svg
+recursive-include strideclient *.txt
+recursive-exclude strideclient *.pyc
