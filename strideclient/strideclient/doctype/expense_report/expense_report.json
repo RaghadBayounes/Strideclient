@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: ER-{YYYY}-{######}",
+ "creation": "2023-01-26 10:58:42.099396",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "expense_report_name",
+  "request_date",
+  "designation",
+  "overall_status",
+  "column_break_hqzc",
+  "employee",
+  "from",
+  "branch",
+  "column_break_dlah",
+  "approval_date",
+  "to",
+  "naming_series",
+  "purchase_invoice_details_section",
+  "new_invoice_button",
+  "invoice_list",
+  "section_break_muxe",
+  "paid_amount",
+  "column_break_vdpr",
+  "tax_amount",
+  "column_break_omb1",
+  "total_tax_inclusive_amount",
+  "notes_section",
+  "long_text_ynh5",
+  "section_break_5pjy",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expense_report_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Expense Report Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchase_invoice_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Invoice Details"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Expense Report",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Data",
+   "label": "Approval Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "overall_status",
+   "fieldtype": "Select",
+   "label": "Overall Status",
+   "options": "Not Paid\nPartially Paid\nPaid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "new_invoice_button",
+   "fieldtype": "Button",
+   "label": "Invoice button"
+  },
+  {
+   "fieldname": "invoice_list",
+   "fieldtype": "Table",
+   "label": "Invoice List",
+   "options": "Purchase Invoice expense"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_tax_inclusive_amount",
+   "fieldtype": "Currency",
+   "label": "Total Tax inclusive Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "long_text_ynh5",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "column_break_hqzc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_dlah",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vdpr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_omb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_muxe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Accounting\nApproved\nRejected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From "
+  },
+  {
+   "default": "Today",
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "section_break_5pjy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation"
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Data",
+   "label": "Branch"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-01-29 15:43:09.461509",
+ "modified_by": "Administrator",
+ "module": "Strideclient",
+ "name": "Expense Report",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

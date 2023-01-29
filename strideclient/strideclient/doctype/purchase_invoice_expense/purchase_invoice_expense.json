@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-01-26 11:43:35.666527",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "purchase_invoice",
+  "naming_series",
+  "item_name",
+  "merchant",
+  "invoice_date",
+  "attach_receipt",
+  "item_category",
+  "invoice_total",
+  "tax_type",
+  "is_tax_inclusive",
+  "tax_amount",
+  "total_tax_amount",
+  "paid_amount",
+  "status",
+  "create_invoice",
+  "temporary_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Purchase invoice"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "PI-.YYYY.-\nEXP-.YYYY.-"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item name"
+  },
+  {
+   "fieldname": "merchant",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "merchant"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice date"
+  },
+  {
+   "fieldname": "attach_receipt",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attach receipt"
+  },
+  {
+   "fieldname": "item_category",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Category"
+  },
+  {
+   "fieldname": "invoice_total",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice total"
+  },
+  {
+   "fieldname": "tax_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tax type",
+   "options": "Purchase Taxes and Charges Template"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_tax_inclusive",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is tax inclusive"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tax amount"
+  },
+  {
+   "fieldname": "total_tax_amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Total tax inclusive amount"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Paid amount"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status",
+   "read_only": 1
+  },
+  {
+   "depends_on": "doc.docstatus == 0 ;",
+   "fieldname": "create_invoice",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Create Invoice"
+  },
+  {
+   "fieldname": "temporary_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Temporary id"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-29 13:51:57.757326",
+ "modified_by": "Administrator",
+ "module": "Strideclient",
+ "name": "Purchase Invoice expense",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
